@@ -126,10 +126,7 @@ export class WarshipRadiusLayer implements Layer {
     if (!rect) return;
 
     // Convert screen coordinates to world coordinates
-    const worldPos = this.transformHandler.screenToWorldCoordinates(
-      e.x - rect.left,
-      e.y - rect.top,
-    );
+    const worldPos = this.transformHandler.screenToWorldCoordinates(e.x, e.y);
 
     this.mouseWorldPos = worldPos;
     this.needsRedraw = true;
